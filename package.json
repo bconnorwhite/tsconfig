@@ -1,0 +1,44 @@
+{
+  "name": "@bconnorwhite/tsconfig",
+  "version": "1.0.0",
+  "description": "Shared TypeScript configuration",
+  "license": "MIT",
+  "private": false,
+  "author": {
+    "name": "Connor White",
+    "email": "oss@bconnorwhite.com",
+    "url": "https://bconnorwhite.com"
+  },
+  "homepage": "https://github.bconnorwhite.com/tsconfig#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bconnorwhite/tsconfig.git"
+  },
+  "bugs": "https://github.com/bconnorwhite/tsconfig/issues",
+  "keywords": [
+    "typescript",
+    "tsconfig",
+    "tsconfig.json",
+    "config"
+  ],
+  "files": [
+    "bun/tsconfig.json",
+    "dom/tsconfig.json",
+    "node/tsconfig.json",
+    "tsconfig.json"
+  ],
+  "exports": {
+    ".": "./tsconfig.json",
+    "./bun": "./bun/tsconfig.json",
+    "./dom": "./dom/tsconfig.json",
+    "./node": "./node/tsconfig.json"
+  },
+  "scripts": {
+    "fix": "find . -path './node_modules' -prune -o -name 'tsconfig.json' -print0 | xargs -0 -n1 jsonlint --sort-keys --enforce-double-quotes --in-place",
+    "lint": "find . -path './node_modules' -prune -o -name 'tsconfig.json' -print0 | xargs -0 -n1 jsonlint --sort-keys --enforce-double-quotes --check"
+
+  },
+  "devDependencies": {
+    "@prantlf/jsonlint": "^17.0.1"
+  }
+}
