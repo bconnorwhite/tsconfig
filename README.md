@@ -74,14 +74,17 @@ bun add @bconnorwhite/tsconfig
 
 ```json
 {
-  "extends": "@bconnorwhite/tsconfig",
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "@bconnorwhite/tsconfig/node",
   "compilerOptions": {
-    "outDir": "build"
+    "outDir": "build",
+    "rootDir": "src",
+    "rootDirs": [
+      "src"
+    ]
   },
-  "include": [
-    "source",
-    "test",
-    "types"
+  "files": [
+    "src/index.ts"
   ]
 }
 ```
