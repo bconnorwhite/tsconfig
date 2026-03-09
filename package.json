@@ -36,7 +36,6 @@
   "scripts": {
     "fix": "find . -path './node_modules' -prune -o -name 'tsconfig.json' -print0 | xargs -0 -n1 jsonlint --sort-keys --enforce-double-quotes --in-place",
     "lint": "find . -path './node_modules' -prune -o -name 'tsconfig.json' -print0 | xargs -0 -n1 jsonlint --sort-keys --enforce-double-quotes --check"
-
   },
   "devDependencies": {
     "@prantlf/jsonlint": "^17.0.1"
