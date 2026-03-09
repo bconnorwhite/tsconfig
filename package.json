@@ -25,7 +25,6 @@
     "bun/tsconfig.json",
     "dom/tsconfig.json",
     "node/tsconfig.json",
-    "README.md",
     "tsconfig.json"
   ],
   "exports": {
